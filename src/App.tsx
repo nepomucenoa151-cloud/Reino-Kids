@@ -52,9 +52,9 @@ export default function App() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl font-black leading-tight mb-6"
+          className="text-[26px] md:text-6xl font-black leading-tight mb-6 px-2"
         >
-          +500 Atividades Completas para <span className="text-blue-royal text-5xl md:text-7xl block mt-2">Reino Kids</span>
+          +500 Atividades Completas para <span className="text-3xl md:text-7xl block mt-2">Reino Kids</span>
         </motion.h1>
         <p className="text-black text-lg mb-8 max-w-2xl mx-auto">
           <span className="font-black text-gray-800 text-xl block mb-2">O melhor material didático cristão</span> para educar e divertir seus pequenos. Ensine a palavra de Deus de forma lúdica e criativa.
@@ -312,13 +312,16 @@ export default function App() {
       </section>
 
       {/* Por Que Escolher a Reino Kids Infantil ? */}
-      <section className="py-20 px-4 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-black mb-4 flex items-center justify-center gap-3">
-            <BookOpen className="w-8 h-8 text-black" />
-            Por Que Escolher a <span className="text-orange-500">Reino Kids Infantil ?</span>
+      <section className="py-12 md:py-20 px-4 max-w-7xl mx-auto">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-[26px] md:text-4xl font-black mb-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 leading-tight">
+            <div className="flex items-center gap-2">
+              <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-black" />
+              <span>Por Que Escolher a</span>
+            </div>
+            <span className="text-orange-500">Reino Kids Infantil?</span>
           </h2>
-          <p className="text-gray-500 max-w-3xl mx-auto text-lg font-medium">
+          <p className="text-gray-500 max-w-3xl mx-auto text-base md:text-lg font-medium px-2">
             Descubra por que professoras, líderes e mães cristãs estão usando este material para ensinar a Palavra de Deus com mais leveza e criatividade.
           </p>
         </div>
