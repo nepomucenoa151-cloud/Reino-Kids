@@ -54,7 +54,7 @@ export default function App() {
           transition={{ delay: 0.1 }}
           className="text-[26px] md:text-6xl font-black leading-tight mb-6 px-2"
         >
-          +500 Atividades Completas para <span className="text-3xl md:text-7xl block mt-2">Reino Kids</span>
+          +500 Atividades Completas para <span className="text-blue-royal text-3xl md:text-7xl block mt-2">Reino Kids</span>
         </motion.h1>
         <p className="text-black text-lg mb-8 max-w-2xl mx-auto">
           <span className="font-black text-gray-800 text-xl block mb-2">O melhor material didático cristão</span> para educar e divertir seus pequenos. Ensine a palavra de Deus de forma lúdica e criativa.
@@ -319,7 +319,7 @@ export default function App() {
               <BookOpen className="w-6 h-6 md:w-8 md:h-8 text-black" />
               <span>Por Que Escolher a</span>
             </div>
-            <span className="text-orange-500">Reino Kids Infantil?</span>
+            <span className="text-blue-royal">Reino Kids Infantil?</span>
           </h2>
           <p className="text-gray-500 max-w-3xl mx-auto text-base md:text-lg font-medium px-2">
             Descubra por que professoras, líderes e mães cristãs estão usando este material para ensinar a Palavra de Deus com mais leveza e criatividade.
@@ -386,7 +386,7 @@ export default function App() {
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
               <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
-            <a href="https://pay.cakto.com.br/ssyyogf_814327" className="inline-block w-full py-4 border-2 border-blue-royal text-blue-royal font-black rounded-full uppercase hover:bg-blue-royal hover:text-white transition-colors cursor-pointer no-underline">
+            <a href="https://pay.cakto.com.br/basdj8y" className="inline-block w-full py-4 border-2 border-blue-royal text-blue-royal font-black rounded-full uppercase hover:bg-blue-royal hover:text-white transition-colors cursor-pointer no-underline">
               Comprar Agora
             </a>
           </div>
