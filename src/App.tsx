@@ -4,7 +4,7 @@
  */
 
 import { motion, AnimatePresence } from "motion/react";
-import { Check, Play, ShieldCheck, X, ChevronLeft, ChevronRight, BookOpen, Users, Download, RefreshCw, Zap, Award, Printer, PartyPopper, Heart, Book } from "lucide-react";
+import { Check, Play, ShieldCheck, X, ChevronLeft, ChevronRight, BookOpen, Users, Download, RefreshCw, Zap, Award, Printer, PartyPopper, Heart, Book, Lock, CheckCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const testimonials = [
@@ -46,7 +46,7 @@ export default function App() {
           animate={{ opacity: 1, y: 0 }}
           className="text-blue-royal font-bold uppercase text-sm mb-4"
         >
-          Acesso Imediato - Arquivos Digitais
+          Acesso Imediato - Via e-Mail
         </motion.p>
         <motion.h1 
           initial={{ opacity: 0, scale: 0.9 }}
@@ -72,13 +72,14 @@ export default function App() {
           ></iframe>
         </div>
 
-        <motion.button 
+        <motion.a 
+          href="https://pay.cakto.com.br/ssyyogf_814327"
           animate={{ scale: [1, 1.08, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
-          className="bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer"
+          className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
         >
-          Quero Garantir Meu Acesso Agora!
-        </motion.button>
+          QUERO ACESSO AGORA!
+        </motion.a>
 
         {/* Trust Bar */}
         <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-gray-500 font-bold text-xs md:text-sm uppercase tracking-wider">
@@ -202,6 +203,7 @@ export default function App() {
                   alt={bonus.title}
                   className="rounded-xl mb-4 w-full aspect-[3/4] object-cover"
                   referrerPolicy="no-referrer"
+                  loading="lazy"
                 />
                 <h4 className="font-black text-blue-royal uppercase text-sm mb-1">Bônus {bonus.id}</h4>
                 <p className="font-black text-lg mb-2 uppercase leading-tight">{bonus.title}</p>
@@ -211,13 +213,14 @@ export default function App() {
               </div>
             ))}
           </div>
-          <motion.button 
-            animate={{ scale: [1, 1.05, 1] }}
-            transition={{ repeat: Infinity, duration: 2 }}
-            className="bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-xl transition-all uppercase tracking-tight cursor-pointer"
+          <motion.a 
+            href="https://pay.cakto.com.br/ssyyogf_814327"
+            animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
+            transition={{ repeat: Infinity, duration: 1.5 }}
+            className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-xl transition-all uppercase tracking-tight cursor-pointer no-underline"
           >
             QUERO ACESSO AGORA!
-          </motion.button>
+          </motion.a>
 
           {/* Trust Bar (Bonus Section) */}
           <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-white font-bold text-xs md:text-sm uppercase tracking-wider opacity-80">
@@ -380,9 +383,9 @@ export default function App() {
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
               <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
-            <button className="w-full py-4 border-2 border-blue-royal text-blue-royal font-black rounded-full uppercase hover:bg-blue-royal hover:text-white transition-colors cursor-pointer">
+            <a href="https://pay.cakto.com.br/ssyyogf_814327" className="inline-block w-full py-4 border-2 border-blue-royal text-blue-royal font-black rounded-full uppercase hover:bg-blue-royal hover:text-white transition-colors cursor-pointer no-underline">
               Comprar Agora
-            </button>
+            </a>
           </div>
           {/* PACOTE COMPLETO */}
           <motion.div 
@@ -401,13 +404,14 @@ export default function App() {
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
             </ul>
-            <motion.button 
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="w-full py-5 bg-green-600 hover:bg-green-700 text-white font-black rounded-full uppercase shadow-lg shadow-green-200 transition-all cursor-pointer"
+            <motion.a 
+              href="https://pay.cakto.com.br/ssyyogf_814327"
+              animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+              className="inline-block w-full py-5 bg-green-600 hover:bg-green-700 text-white font-black rounded-full uppercase shadow-lg shadow-green-200 transition-all cursor-pointer no-underline"
             >
-              Quero o PACOTE COMPLETO
-            </motion.button>
+              QUERO ACESSO AGORA!
+            </motion.a>
 
             {/* Trust Bar (Pricing Section) */}
             <div className="mt-6 flex flex-wrap justify-center items-center gap-4 text-gray-400 font-bold text-[10px] uppercase tracking-wider">
@@ -446,6 +450,7 @@ export default function App() {
                     className="w-full h-full rounded-full object-cover"
                     alt="Ana Cristina"
                     referrerPolicy="no-referrer"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-[#F27D26] text-white text-[10px] font-black uppercase px-4 py-1 rounded-full shadow-lg">
@@ -508,39 +513,64 @@ export default function App() {
         </div>
       </section>
 
-      {/* Footer de Segurança */}
-      <footer className="py-12 bg-white text-center px-4 border-t border-gray-100">
-        <div className="mb-6 flex justify-center items-center gap-8 grayscale opacity-50">
-             <img src="https://logodownload.org/wp-content/uploads/2014/10/mercado-pago-logo.png" className="h-6" alt="Mercado Pago" referrerPolicy="no-referrer" />
-             <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" className="h-6" alt="PayPal" referrerPolicy="no-referrer" />
-        </div>
-        <motion.button 
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="bg-green-600 hover:bg-green-700 text-white font-black py-4 px-10 rounded-full uppercase shadow-lg mb-8 transition-all cursor-pointer"
-        >
-          Comprar com Segurança
-        </motion.button>
+      {/* Seção de Garantia (Igual à Imagem) */}
+      <section className="py-20 bg-[#F9F7F5] px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          {/* Ícone de Escudo Superior */}
+          <div className="flex justify-center mb-8">
+            <div className="w-20 h-20 bg-[#FF6B00] rounded-full flex items-center justify-center shadow-xl shadow-orange-200/50">
+              <ShieldCheck className="w-10 h-10 text-white" />
+            </div>
+          </div>
 
-        {/* Trust Bar (Footer) */}
-        <div className="mb-8 flex flex-wrap justify-center items-center gap-6 text-gray-400 font-bold text-xs uppercase tracking-wider">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-green-500" />
-            Compra 100% Segura
+          {/* Título */}
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <div className="bg-white p-1 rounded-lg border-2 border-gray-800">
+                <ShieldCheck className="w-8 h-8 text-red-600" />
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-800">
+              Sua Compra <span className="text-[#FF6B00]">100% Segura</span>
+            </h2>
           </div>
-          <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-yellow-500" />
-            Acesso Imediato
+
+          {/* Descrição */}
+          <div className="text-gray-500 text-lg md:text-xl mb-12 leading-relaxed font-medium">
+            <p className="mb-2">Sua satisfação é garantida! Se por qualquer motivo você não ficar</p>
+            <p className="mb-2">satisfeito com o material, tem <span className="font-black text-gray-800">7 dias para pedir seu dinheiro de volta</span>.</p>
+            <p className="italic">Risco zero para você!</p>
           </div>
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-blue-royal" />
-            Garantia 30 Dias
+
+          {/* Botão */}
+          <div className="flex justify-center mb-16">
+            <motion.a 
+              href="https://pay.cakto.com.br/ssyyogf_814327"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex bg-[#FF6B00] hover:bg-[#E66000] text-white font-black py-6 px-12 rounded-full text-xl md:text-2xl shadow-2xl items-center gap-4 uppercase tracking-tight transition-all cursor-pointer no-underline"
+            >
+              <Lock className="w-7 h-7" />
+              Comprar com Segurança
+            </motion.a>
+          </div>
+
+          {/* Ícones de Rodapé da Seção */}
+          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-400 font-bold text-sm uppercase tracking-widest">
+            <div className="flex items-center gap-2">
+              <Lock className="w-5 h-5 text-[#FF6B00]" />
+              Compra Segura
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-[#FF6B00]" />
+              Satisfação Garantida
+            </div>
+            <div className="flex items-center gap-2">
+              <Award className="w-5 h-5 text-[#FF6B00]" />
+              Qualidade Premium
+            </div>
           </div>
         </div>
-        <div className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">
-            © 2024 Reino Kids Infantil | Todos os Direitos Reservados
-        </div>
-      </footer>
+      </section>
+
     </div>
   );
 }
