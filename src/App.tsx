@@ -4,7 +4,7 @@
  */
 
 import { motion, AnimatePresence } from "motion/react";
-import { Check, Play, ShieldCheck, X, ChevronLeft, ChevronRight, BookOpen, Users, Download, RefreshCw, Zap, Award, Printer, PartyPopper, Heart, Book, Lock, CheckCircle } from "lucide-react";
+import { Check, Play, ShieldCheck, X, ChevronLeft, ChevronRight, BookOpen, Users, Download, RefreshCw, Zap, Award, Printer, PartyPopper, Heart, Book, Lock, CheckCircle, Star, Sparkles } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const testimonials = [
@@ -35,8 +35,8 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans">
       {/* Faixa de Alerta Superior */}
-      <div className="bg-blue-royal text-white text-center py-2 text-xs md:text-sm font-bold uppercase tracking-widest">
-        Oferta Especial - Por Tempo Limitado!
+      <div className="bg-blue-royal text-white text-center py-2 text-xs md:text-sm font-bold tracking-widest">
+        🔥 Páscoa chegando! Promoção válida somente hoje — Garanta seus moldes agora!
       </div>
 
       {/* Hero Section */}
@@ -54,31 +54,28 @@ export default function App() {
           transition={{ delay: 0.1 }}
           className="text-[26px] md:text-6xl font-black leading-tight mb-6 px-2"
         >
-          +500 Atividades Completas para <span className="text-blue-royal text-3xl md:text-7xl block mt-2">Reino Kids</span>
+          <span className="text-blue-royal text-xl md:text-2xl block mb-2">REINO KIDS apresenta</span>
+          Lembrancinhas de Páscoa para Imprimir
         </motion.h1>
-        <p className="text-black text-lg mb-8 max-w-2xl mx-auto">
-          <span className="font-black text-gray-800 text-xl block mb-2">O melhor material didático cristão</span> para educar e divertir seus pequenos. Ensine a palavra de Deus de forma lúdica e criativa.
-        </p>
-
-        {/* Video Principal */}
-        <div className="relative max-w-3xl mx-auto mb-12 shadow-2xl rounded-[2rem] overflow-hidden border-8 border-white bg-black aspect-video">
-          <iframe 
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/A4fEPERjo0Q" 
-            title="Vídeo de Apresentação"
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-          ></iframe>
+        <div className="text-black text-lg mb-8 max-w-2xl mx-auto space-y-2">
+          <p className="font-black text-2xl md:text-3xl text-gray-800">
+            ✝️ Cristãos + 🐰 Tradicionais
+          </p>
+          <p className="text-xl font-medium">
+            Baixe, imprima e monte em minutos
+          </p>
+          <p className="text-3xl font-black text-blue-royal">
+            por apenas R$ 10,00
+          </p>
         </div>
 
         <motion.a 
-          href="https://pay.cakto.com.br/ssyyogf_814327"
+          href="https://pay.cakto.com.br/basdj8y"
           animate={{ scale: [1, 1.08, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
         >
-          QUERO ACESSO AGORA!
+          GARANTIR MEUS MOLDES AGORA 🐣
         </motion.a>
 
         {/* Trust Bar */}
@@ -98,76 +95,32 @@ export default function App() {
         </div>
       </section>
 
-      {/* O Que Você Vai Receber */}
-      <section className="py-20 bg-white px-4 relative overflow-hidden">
-        {/* Elementos Decorativos Infantis */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-blue-100 rounded-full blur-3xl opacity-50" />
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-yellow-100 rounded-full blur-3xl opacity-50" />
-
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="flex items-center justify-center gap-4 mb-16"
-          >
-            <BookOpen className="w-10 h-10 text-blue-royal" />
-            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">
-              O Que Você Vai <span className="text-blue-royal">Receber</span>
+      {/* Prévia do Conteúdo */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto bg-[#FDF8F1] rounded-[3rem] p-8 md:p-16 border border-[#E8DCC4]">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-[#F5EBD8] text-[#A68B5B] px-6 py-2 rounded-full font-black text-xs md:text-sm uppercase tracking-widest mb-6 border border-[#D9C9A9]">
+              <Sparkles className="w-4 h-4" /> PRÉVIA DO CONTEÚDO
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black text-gray-800 leading-tight">
+              Veja alguns moldes que <span className="text-[#C4A46D]">você vai receber hoje!</span>
             </h2>
-          </motion.div>
+          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { 
-                icon: <BookOpen className="w-8 h-8" />, 
-                title: "+500 Atividades Completas", 
-                desc: "Dinâmicas, jogos, histórias e atividades prontas para aplicar.",
-                color: "bg-blue-50 text-blue-royal",
-                borderColor: "border-blue-200"
-              },
-              { 
-                icon: <Zap className="w-8 h-8" />, 
-                title: "Guia de versiculos", 
-                desc: "Um guia prático para memorização e ensino de versículos bíblicos.",
-                color: "bg-purple-50 text-purple-600",
-                borderColor: "border-purple-200"
-              },
-              { 
-                icon: <Users className="w-8 h-8" />, 
-                title: "+ 60 Dinâmicas", 
-                desc: "Atividades interativas para envolver as crianças no aprendizado.",
-                color: "bg-green-50 text-green-600",
-                borderColor: "border-green-200"
-              },
-              { 
-                icon: <Award className="w-8 h-8" />, 
-                title: "Bobbie goodies 2026", 
-                desc: "Material exclusivo e atualizado para o ano de 2026.",
-                color: "bg-yellow-50 text-yellow-600",
-                borderColor: "border-yellow-200"
-              },
-            ].map((item, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10, scale: 1.02 }}
-                className={`bg-white p-8 rounded-[2.5rem] shadow-2xl shadow-blue-100/50 border-2 ${item.borderColor} flex flex-col items-center text-center group transition-all`}
-              >
-                <div className={`p-5 rounded-2xl mb-6 transition-transform group-hover:rotate-6 ${item.color}`}>
-                  {item.icon}
-                </div>
-                <h3 className="font-black text-lg mb-3 leading-tight text-gray-800">
-                  {item.title}
-                </h3>
-                <p className="text-black text-sm font-medium leading-relaxed">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
+          <div className="flex justify-center">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+            >
+              <img 
+                src="https://i.ibb.co/jkwLpMv6/Sem-t-tulo.png" 
+                alt="Prévia dos Moldes"
+                className="w-full h-auto"
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -246,14 +199,28 @@ export default function App() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-4"
         >
-          <h2 className="text-3xl md:text-4xl font-black mb-4 uppercase tracking-tight">
-            Quem Já Usa, <span className="text-blue-royal">Ama!</span>
+          <h2 className="text-3xl md:text-5xl font-black mb-6 max-w-3xl leading-tight">
+            O que dizem as pessoas que já <span className="text-blue-royal">compraram e aprovaram?</span>
           </h2>
-          <p className="text-gray-500 font-bold uppercase text-sm tracking-widest">
-            Veja o que Mães e Professoras estão vivendo com seus pequenos
-          </p>
+          
+          <div className="flex justify-center gap-1 mb-8">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 md:w-8 md:h-8 fill-blue-royal text-blue-royal" />
+            ))}
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className="flex -space-x-4">
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=a" alt="User" referrerPolicy="no-referrer" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=b" alt="User" referrerPolicy="no-referrer" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=c" alt="User" referrerPolicy="no-referrer" />
+            </div>
+            <p className="text-gray-800 font-bold text-lg">
+              +3.000 pessoas já compraram e <span className="text-green-600">aprovaram ✅</span>
+            </p>
+          </div>
         </motion.div>
         
         <div className="relative w-full max-w-xs md:max-w-sm">
@@ -382,7 +349,7 @@ export default function App() {
             <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE BÁSICO</h3>
             <p className="text-4xl font-black mb-6">R$ 10,00</p>
             <ul className="text-left space-y-4 mb-8 text-gray-500 font-medium">
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso a 100 Atividades</li>
+              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso + de 100 Lembrancinhas Páscoa</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
               <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
@@ -397,13 +364,13 @@ export default function App() {
           >
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-royal text-white px-6 py-1 rounded-full font-bold text-sm">MAIS VENDIDO</div>
             <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE COMPLETO</h3>
-            <p className="text-5xl font-black text-blue-royal mb-6">R$ 19,90</p>
+            <p className="text-5xl font-black text-blue-royal mb-6">R$ 27,90</p>
             <ul className="text-left space-y-4 mb-8 font-bold">
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> +500 Atividades Completas</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Todos os 3 Bônus Grátis</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versiculos</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 60 Dinâmicas</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Bobbie goodies 2026</li>
+              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
             </ul>
