@@ -70,7 +70,7 @@ export default function App() {
         </div>
 
         <motion.a 
-          href="https://pay.cakto.com.br/basdj8y"
+          href="#pacotes"
           animate={{ scale: [1, 1.08, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
@@ -91,6 +91,37 @@ export default function App() {
           <div className="flex items-center gap-2">
             <Award className="w-5 h-5 text-blue-royal" />
             Garantia 30 Dias
+          </div>
+        </div>
+      </section>
+
+      {/* Especial de Páscoa Cristã */}
+      <section className="bg-[#fff5e6] py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-gray-800 mb-10 leading-tight">
+            Celebre com Propósito: Moldes e Atividades de Páscoa
+          </h2>
+          
+          <div className="bg-white p-8 md:p-12 rounded-[3rem] shadow-xl border-2 border-orange-100 max-w-2xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-black text-blue-royal mb-4 leading-tight">
+              Pack Digital de Páscoa: Moldes de Lembrancinhas + Atividades Educativas
+            </h3>
+            <p className="text-gray-600 text-lg mb-8 font-medium">
+              O recurso ideal para mães, professoras e líderes de ministério infantil ensinarem o verdadeiro sentido da Páscoa
+            </p>
+            
+            <motion.a 
+              href="#pacotes"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-[#FF8C00] hover:bg-[#E67E00] text-white font-black py-5 px-12 rounded-full text-xl md:text-2xl shadow-lg transition-all uppercase tracking-tight cursor-pointer no-underline mb-4"
+            >
+              Baixar Agora
+            </motion.a>
+            
+            <p className="text-gray-500 text-sm font-bold italic">
+              ⚠️ Oferta de Páscoa: Últimas unidades com preço promocional e entrega instantânea
+            </p>
           </div>
         </div>
       </section>
@@ -167,7 +198,7 @@ export default function App() {
             ))}
           </div>
           <motion.a 
-            href="https://pay.cakto.com.br/ssyyogf_814327"
+            href="#pacotes"
             animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
             className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-xl transition-all uppercase tracking-tight cursor-pointer no-underline"
@@ -341,7 +372,7 @@ export default function App() {
       </section>
 
       {/* Planos de Preço */}
-      <section className="py-20 px-4 max-w-5xl mx-auto">
+      <section id="pacotes" className="py-20 px-4 max-w-5xl mx-auto">
         <h2 className="text-center text-3xl font-black mb-16 uppercase">Escolha o Seu Plano</h2>
         <div className="grid md:grid-cols-2 gap-10">
           {/* PACOTE BÁSICO */}
@@ -375,7 +406,7 @@ export default function App() {
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
             </ul>
             <motion.a 
-              href="https://pay.cakto.com.br/ssyyogf_814327"
+              href="#pacotes"
               animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
               className="inline-block w-full py-5 bg-green-600 hover:bg-green-700 text-white font-black rounded-full uppercase shadow-lg shadow-green-200 transition-all cursor-pointer no-underline"

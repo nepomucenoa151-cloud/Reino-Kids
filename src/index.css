@@ -9,3 +9,14 @@
 body {
   @apply bg-[#fdf8f4] text-[#333] antialiased;
 }
+
+@media (max-width: 768px) {
+  h1, h2, h3 {
+    font-size: 26px !important;
+    word-break: keep-all;
+  }
+  p {
+    font-size: 16px !important;
+    word-break: keep-all;
+  }
+}
