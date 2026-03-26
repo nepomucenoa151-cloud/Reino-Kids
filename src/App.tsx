@@ -16,6 +16,7 @@ const testimonials = [
 
 export default function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showUpsell, setShowUpsell] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -373,38 +374,57 @@ export default function App() {
 
       {/* Planos de Preço */}
       <section id="pacotes" className="py-20 px-4 max-w-5xl mx-auto">
-        <h2 className="text-center text-3xl font-black mb-16 uppercase">Escolha o Seu Plano</h2>
-        <div className="grid md:grid-cols-2 gap-10">
+        <h2 className="text-center text-3xl font-black mb-16 uppercase">ESCOLHA SEU PACOTE !!</h2>
+        <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* PACOTE BÁSICO */}
-          <div className="bg-white p-10 rounded-[3rem] border-2 border-gray-100 text-center hover:border-blue-200 transition-all">
-            <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE BÁSICO</h3>
+          <div className="bg-white p-10 rounded-[3rem] border border-gray-200 text-center opacity-80 transition-all">
+            <h3 className="text-2xl font-bold mb-2 uppercase">PACOTE BÁSICO</h3>
+            <p className="text-gray-500 text-sm mb-4 font-medium">Recurso pontual apenas para lembrancinhas. Ideal para um único evento.</p>
             <p className="text-4xl font-black mb-6">R$ 10,00</p>
             <ul className="text-left space-y-4 mb-8 text-gray-500 font-medium">
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso + de 100 Lembrancinhas Páscoa</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
               <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
-            <a href="https://pay.cakto.com.br/basdj8y" className="inline-block w-full py-4 border-2 border-blue-royal text-blue-royal font-black rounded-full uppercase hover:bg-blue-royal hover:text-white transition-colors cursor-pointer no-underline">
+            <button 
+              onClick={() => setShowUpsell(true)}
+              className="inline-block w-full py-4 border-2 border-gray-400 text-gray-500 font-black rounded-full uppercase hover:bg-gray-400 hover:text-white transition-colors cursor-pointer"
+            >
               Comprar Agora
-            </a>
+            </button>
           </div>
+
           {/* PACOTE COMPLETO */}
           <motion.div 
-            whileHover={{ scale: 1.07 }}
-            className="bg-white p-10 rounded-[3rem] border-4 border-blue-royal text-center relative shadow-2xl scale-105"
+            whileHover={{ scale: 1.05 }}
+            className="bg-white p-10 rounded-[3rem] border-4 border-[#FF8C00] text-center relative shadow-2xl z-10"
           >
-            <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-blue-royal text-white px-6 py-1 rounded-full font-bold text-sm">MAIS VENDIDO</div>
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FF8C00] text-white px-6 py-1 rounded-full font-bold text-sm shadow-lg">MAIS VENDIDO</div>
             <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE COMPLETO</h3>
             <p className="text-5xl font-black text-blue-royal mb-6">R$ 27,90</p>
-            <ul className="text-left space-y-4 mb-8 font-bold">
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> +500 Atividades Completas</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Todos os 3 Bônus Grátis</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versiculos</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 60 Dinâmicas</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
-            </ul>
+            
+            <div className="text-left mb-6">
+              <h4 className="font-black text-gray-800 uppercase text-sm mb-4 border-b border-gray-100 pb-2">Plano do Ministério Infantil / Planejamento Anual Completo</h4>
+              <ul className="space-y-4 font-bold">
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> +500 Atividades Completas</li>
+                <li className="flex items-center gap-2">
+                  <Check className="text-green-500 w-5 h-5" /> 
+                  <span>Todos os 3 Bônus Grátis</span>
+                </li>
+                <li className="text-blue-royal text-sm font-black pl-7 leading-tight">
+                  Economize +10 horas de planejamento por semana com material pronto para o ano todo.
+                </li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versiculos</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 60 Dinâmicas</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
+              </ul>
+              <p className="text-[10px] text-red-500 font-black mt-4 uppercase tracking-tighter text-center">
+                Bônus garantidos apenas para compras nas próximas 12 horas.
+              </p>
+            </div>
+
             <motion.a 
               href="#pacotes"
               animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
@@ -571,6 +591,83 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Upsell Modal */}
+      <AnimatePresence>
+        {showUpsell && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="bg-white rounded-[2.5rem] p-8 md:p-12 max-w-2xl w-full shadow-2xl relative overflow-hidden"
+            >
+              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500" />
+              
+              <button 
+                onClick={() => setShowUpsell(false)}
+                className="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-6">
+                  <PartyPopper className="w-8 h-8" />
+                </div>
+                
+                <h2 className="text-2xl md:text-3xl font-black text-gray-900 mb-4 leading-tight">
+                  Parabéns pelo seu Kit de Páscoa!
+                </h2>
+                
+                <div className="bg-orange-50 border-2 border-orange-200 rounded-2xl p-6 mb-8">
+                  <p className="text-orange-800 font-black text-lg md:text-xl mb-2">
+                    Mas espere, só para você agora...
+                  </p>
+                  <p className="text-gray-700 font-medium text-base md:text-lg leading-relaxed">
+                    Complete seu material com <span className="font-black text-gray-900">+500 atividades</span> e o pacote completo por apenas <span className="text-green-600 font-black text-2xl">R$ 17,90</span>
+                  </p>
+                  <p className="text-gray-400 text-sm mt-2 line-through font-bold">
+                    De R$ 27,90 por +R$ 17,90
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-4">
+                  <a 
+                    href="https://pay.cakto.com.br/ssyyogf_814327"
+                    className="bg-green-600 hover:bg-green-700 text-white font-black py-5 px-8 rounded-full text-lg md:text-xl shadow-xl shadow-green-200 transition-all uppercase no-underline"
+                  >
+                    Sim! Quero o Pacote Completo
+                  </a>
+                  
+                  <a 
+                    href="https://pay.cakto.com.br/basdj8y"
+                    className="text-gray-400 hover:text-gray-600 font-bold text-sm uppercase tracking-widest transition-colors no-underline"
+                  >
+                    Não, quero apenas o kit básico
+                  </a>
+                </div>
+
+                <div className="mt-8 flex items-center justify-center gap-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+                  <div className="flex items-center gap-1">
+                    <ShieldCheck className="w-4 h-4" />
+                    Pagamento Seguro
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Zap className="w-4 h-4" />
+                    Acesso Imediato
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
     </div>
   );
