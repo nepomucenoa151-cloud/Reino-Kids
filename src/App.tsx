@@ -36,7 +36,7 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans overflow-x-hidden">
       {/* Hero Section */}
-      <section className="pt-8 md:pt-20 pb-16 px-5 max-w-5xl mx-auto text-center flex flex-col items-center">
+      <section className="pt-16 md:pt-20 pb-16 px-5 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Badge superior */}
         <motion.p 
           initial={{ opacity: 0, y: -10 }}
@@ -103,7 +103,7 @@ export default function App() {
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
               className="inline-flex bg-green-500 hover:bg-green-600 text-white font-black py-4 px-6 md:py-6 md:px-14 rounded-full text-base md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline min-h-[48px] items-center justify-center w-full max-w-[340px] md:max-w-none mx-auto leading-tight text-center"
             >
-              QUERO ACESSO AGORA AO POTE 🏺
+              QUERO ACESSO AGORA AO POTE
             </motion.a>
           </div>
 
@@ -374,24 +374,24 @@ export default function App() {
           >
             <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-[#FF8C00] text-white px-6 py-1 rounded-full font-bold text-sm shadow-lg">MAIS VENDIDO</div>
             <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE COMPLETO</h3>
-            <p className="text-5xl font-black text-blue-royal mb-6">R$ 27,90</p>
+            <p className="text-6xl md:text-7xl font-black text-blue-royal mb-8">R$ 27,90</p>
             
             <div className="text-left mb-6">
-              <h4 className="font-black text-gray-800 uppercase text-sm mb-4 border-b border-gray-100 pb-2">PLANO DO MINISTÉRIO INFANTIL / PLANEJAMENTO ANUAL COMPLETO</h4>
-              <ul className="space-y-4 font-bold">
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> +500 Atividades Completas</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Todos os 3 Bônus Grátis</li>
-                <li className="text-blue-royal text-sm font-black pl-7 leading-tight">
+              <h4 className="font-black text-gray-800 uppercase text-xs mb-4 border-b border-gray-100 pb-2">PLANO DO MINISTÉRIO INFANTIL / PLANEJAMENTO ANUAL COMPLETO</h4>
+              <ul className="space-y-3 text-sm md:text-base font-bold">
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> +500 Atividades Completas</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> Todos os 3 Bônus Grátis</li>
+                <li className="text-blue-royal text-[11px] md:text-xs font-black pl-6 leading-tight italic">
                   Economize +10 horas de planejamento por semana com material pronto para o ano todo.
                 </li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de Versículos</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 100 Dinâmicas</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Potinho da Oração</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> Guia de Versículos</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> + 100 Dinâmicas</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> Moldes Lembrancinha de Páscoa</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> Potinho da Oração</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-4 h-4" /> Acesso Vitalício</li>
               </ul>
-              <p className="text-[10px] text-red-500 font-black mt-4 uppercase tracking-tighter text-center">
-                Bônus garantidos apenas para compras nas próximas 12 horas.
+              <p className="text-[10px] md:text-xs text-red-600 font-black mt-6 uppercase tracking-tighter text-center max-w-[280px] mx-auto leading-tight">
+                🔥 Bônus garantidos apenas para compras nas próximas 12 horas.
               </p>
             </div>
 
