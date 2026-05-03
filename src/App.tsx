@@ -34,101 +34,101 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans overflow-x-hidden">
       {/* Hero Section */}
-      <section className="pt-12 md:pt-24 pb-20 px-4 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 text-center md:text-left">
-          {/* Text Content */}
-          <div className="flex-1 order-2 md:order-1">
-            <motion.p 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="text-blue-royal font-black uppercase text-sm mb-4 tracking-widest"
-            >
-              🚀 Acesso Imediato - Via e-Mail
-            </motion.p>
-            <motion.h1 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-4xl md:text-6xl font-black leading-[1.1] mb-6 text-gray-800"
-            >
-              <span className="text-blue-royal text-xl md:text-2xl block mb-4 font-black">REINO KIDS apresenta</span>
-              💛 Transforme o momento de oração no instante mais especial do dia do seu filho
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-10 font-medium leading-relaxed"
-            >
-              Um jeito simples, lindo e educativo de ensinar seu pequeno a falar com Deus todos os dias 🙏
-            </motion.p>
+      <section className="pt-8 md:pt-20 pb-16 px-5 max-w-5xl mx-auto text-center flex flex-col items-center">
+        {/* Badge superior */}
+        <motion.p 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-blue-royal font-black uppercase text-xs md:text-sm mb-4 tracking-[0.2em]"
+        >
+          🚀 Acesso Imediato - Via e-Mail
+        </motion.p>
 
-            <div className="mb-10">
-              <p className="text-3xl font-black text-blue-royal mb-6">
-                por apenas <span className="text-4xl">R$ 10,00</span>
-              </p>
-              <motion.a 
-                href="#pacotes"
-                animate={{ 
-                  scale: [1, 1.05, 1], 
-                  boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 40px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] 
-                }}
-                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-6 px-10 md:px-14 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
-              >
-                QUERO ACESSO AGORA AO POTE 🏺
-              </motion.a>
-            </div>
+        {/* Headline Principal */}
+        <motion.h1 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+          className="text-[28px] md:text-6xl font-black leading-[1.1] mb-6 text-gray-800 max-w-4xl"
+        >
+          <span className="text-blue-royal text-lg md:text-2xl block mb-2 font-black">REINO KIDS apresenta</span>
+          💛 Transforme o momento de oração no instante mais especial do dia do seu filho
+        </motion.h1>
 
-            {/* Trust Bar */}
-            <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-gray-500 font-bold text-xs uppercase tracking-wider">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-green-500" />
-                Compra 100% Segura
-              </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5 text-yellow-500" />
-                Acesso Imediato
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-blue-royal" />
-                Garantia 30 Dias
-              </div>
-            </div>
+        {/* Imagem do Produto (Posicionada abaixo da headline) */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="w-full max-w-[280px] md:max-w-md mb-6 relative"
+        >
+          <div className="absolute -inset-4 bg-blue-royal/5 rounded-full blur-2xl -z-10" />
+          <div className="rounded-[2rem] overflow-hidden shadow-2xl border-4 md:border-8 border-white bg-white">
+            <img 
+              src="https://i.ibb.co/NdMj1xwg/Gemini-Generated-Image-6gv15o6gv15o6gv1.png" 
+              alt="Potinho da Oração - Reino Kids" 
+              className="w-full max-w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+              referrerPolicy="no-referrer"
+            />
+          </div>
+          {/* Badge de Oferta (Mobile small, Desktop visible) */}
+          <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-900 font-black py-2 px-4 rounded-xl shadow-lg transform rotate-3 text-xs md:text-base">
+            OFERTA EXCLUSIVA! 🎁
+          </div>
+        </motion.div>
+
+        {/* Descrição e CTA */}
+        <div className="w-full max-w-2xl flex flex-col items-center">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-lg md:text-2xl text-gray-600 mb-6 font-medium leading-relaxed"
+          >
+            Um jeito simples, lindo e educativo de ensinar seu pequeno a falar com Deus todos os dias 🙏
+          </motion.p>
+
+          <div className="mb-8 w-full">
+            <p className="text-2xl md:text-3xl font-black text-blue-royal mb-4">
+              por apenas <span className="text-3xl md:text-4xl text-green-600">R$ 10,00</span>
+            </p>
+            <motion.a 
+              href="#pacotes"
+              animate={{ 
+                scale: [1, 1.05, 1], 
+                boxShadow: ["0px 0px 0px rgba(34, 197, 94, 0)", "0px 0px 30px rgba(34, 197, 94, 0.4)", "0px 0px 0px rgba(34, 197, 94, 0)"] 
+              }}
+              transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              className="inline-block bg-green-500 hover:bg-green-600 text-white font-black py-5 px-8 md:py-6 md:px-14 rounded-full text-lg md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline min-h-[48px] flex items-center justify-center w-[90%] md:w-auto mx-auto"
+            >
+              QUERO ACESSO AGORA AO POTE 🏺
+            </motion.a>
           </div>
 
-          {/* Image Content */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
-            className="flex-1 order-1 md:order-2 w-full max-w-xl"
-          >
-            <div className="relative">
-              <div className="absolute -inset-4 bg-blue-royal/5 rounded-[3rem] blur-2xl -z-10" />
-              <div className="rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-8 border-white bg-white">
-                <img 
-                  src="https://i.ibb.co/NdMj1xwg/Gemini-Generated-Image-6gv15o6gv15o6gv1.png" 
-                  alt="Potinho da Oração - Reino Kids" 
-                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              {/* Decorative Badge */}
-              <div className="absolute -bottom-6 -right-6 md:right-0 bg-yellow-400 text-gray-900 font-black py-4 px-6 rounded-2xl shadow-xl transform rotate-3 hidden md:block">
-                OFERTA EXCLUSIVA! 🎁
-              </div>
+          {/* Trust Bar (Compacta para Mobile) */}
+          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-gray-400 font-bold text-[10px] md:text-xs uppercase tracking-wider">
+            <div className="flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-green-500" />
+              Compra Segura
             </div>
-          </motion.div>
+            <div className="flex items-center gap-1.5">
+              <Zap className="w-4 h-4 text-yellow-500" />
+              Acesso Imediato
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Award className="w-4 h-4 text-blue-royal" />
+              Garantia 30 Dias
+            </div>
+          </div>
         </div>
       </section>
 
 
+
       {/* Seção de Bônus */}
-      <section className="bg-blue-royal py-16 text-white px-4">
+      <section className="bg-blue-royal py-16 text-white px-5">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-black mb-12 uppercase">Bônus Exclusivos Grátis!</h2>
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -136,19 +136,19 @@ export default function App() {
               { 
                 id: 1, 
                 title: "+100 Dinâmicas Criativas! 🎨", 
-                desc: "Este material vai ajudar você, líder, a melhorar o desempenho e o engajamento dos seus alunos em sala de aula. Transforme o seu Ministério Kids hoje mesmo!",
+                desc: "Este material ajudará você, líder, a elevar o desempenho e o engajamento dos seus alunos em sala de aula. Transforme seu Ministério Kids hoje mesmo!",
                 img: "https://i.ibb.co/YBgcpqtC/Gemini-Generated-Image-mqsnwmmqsnwmmqsn.png" 
               },
               { 
                 id: 2, 
                 title: "Planejamento Anual", 
-                desc: "Material onde você titia e professora vai se organizar o ano inteiro com as atividades.",
+                desc: "Planejamento estruturado para que você, professora e líder, tenha organização total durante o ano letivo.",
                 img: "https://i.ibb.co/MDV3ynC4/plane.jpg" 
               },
               { 
                 id: 3, 
                 title: "Jogos Cristãos", 
-                desc: "Os melhores jogos cristãos: Quiz, Uno da fé, Cruzadinhas e outros.",
+                desc: "Destaque seu ensino com Quiz, Uno da Fé, Cruzadinhas e outros jogos educativos fundamentados na Bíblia.",
                 img: "https://i.ibb.co/hFcdxhk7/image.jpg" 
               },
             ].map((bonus) => (
@@ -156,7 +156,7 @@ export default function App() {
                 <img 
                   src={bonus.img} 
                   alt={bonus.title}
-                  className="rounded-xl mb-4 w-full aspect-[3/4] object-cover"
+                  className="rounded-xl mb-4 w-full max-w-full aspect-[3/4] object-cover"
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
@@ -196,7 +196,7 @@ export default function App() {
       </section>
 
       {/* Depoimento WhatsApp Carousel */}
-      <section className="py-20 px-4 flex flex-col items-center bg-gray-50 overflow-hidden">
+      <section className="py-20 px-5 flex flex-col items-center bg-gray-50 overflow-hidden">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -215,9 +215,9 @@ export default function App() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <div className="flex -space-x-4">
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=a" alt="User" referrerPolicy="no-referrer" />
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=b" alt="User" referrerPolicy="no-referrer" />
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=c" alt="User" referrerPolicy="no-referrer" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=a" alt="User" referrerPolicy="no-referrer" loading="lazy" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=b" alt="User" referrerPolicy="no-referrer" loading="lazy" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=c" alt="User" referrerPolicy="no-referrer" loading="lazy" />
             </div>
             <p className="text-gray-800 font-bold text-lg">
               +3.000 pessoas já compraram e <span className="text-green-600">aprovaram ✅</span>
@@ -235,8 +235,9 @@ export default function App() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.5 }}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain max-w-full"
                 referrerPolicy="no-referrer"
+                loading="lazy"
               />
             </AnimatePresence>
           </div>
@@ -281,7 +282,7 @@ export default function App() {
       </section>
 
       {/* Por Que Escolher a Reino Kids Infantil ? */}
-      <section className="py-12 md:py-20 px-4 max-w-7xl mx-auto">
+      <section className="py-12 md:py-20 px-5 max-w-7xl mx-auto">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-[26px] md:text-4xl font-black mb-4 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 leading-tight">
             <div className="flex items-center gap-2">
@@ -291,7 +292,7 @@ export default function App() {
             <span className="text-blue-royal">Reino Kids Infantil?</span>
           </h2>
           <p className="text-gray-500 max-w-3xl mx-auto text-base md:text-lg font-medium px-2">
-            Descubra por que professoras, líderes e mães cristãs estão usando este material para ensinar a Palavra de Deus com mais leveza e criatividade.
+            Descubra por que professoras, líderes e mães cristãs confiam nesta coleção para transmitir a Palavra de Deus com leveza e criatividade.
           </p>
         </div>
 
@@ -343,7 +344,7 @@ export default function App() {
       </section>
 
       {/* Planos de Preço */}
-      <section id="pacotes" className="py-20 px-4 max-w-5xl mx-auto">
+      <section id="pacotes" className="py-20 px-5 max-w-5xl mx-auto">
         <h2 className="text-center text-3xl font-black mb-16 uppercase">ESCOLHA SEU PACOTE !!</h2>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* PACOTE BÁSICO */}
@@ -380,7 +381,7 @@ export default function App() {
                 <li className="text-blue-royal text-sm font-black pl-7 leading-tight">
                   Economize +10 horas de planejamento por semana com material pronto para o ano todo.
                 </li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versículos</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de Versículos</li>
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 100 Dinâmicas</li>
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Potinho da Oração</li>
@@ -423,7 +424,7 @@ export default function App() {
       </section>
 
       {/* Sobre a Autora */}
-      <section className="py-20 bg-[#FAF9F6] px-4">
+      <section className="py-20 bg-[#FAF9F6] px-5">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-center gap-2 mb-10 text-[#F27D26] font-black uppercase tracking-widest text-sm">
             <BookOpen className="w-5 h-5" />
@@ -437,7 +438,7 @@ export default function App() {
                 <div className="w-48 h-48 rounded-full p-1 border-4 border-[#F27D26] overflow-hidden shadow-2xl">
                   <img 
                     src="https://i.ibb.co/R4Nz5DLK/images.png" 
-                    className="w-full h-full rounded-full object-cover"
+                    className="w-full max-w-full h-full rounded-full object-cover"
                     alt="Ana Cristina"
                     referrerPolicy="no-referrer"
                     loading="lazy"
@@ -455,16 +456,16 @@ export default function App() {
                 
                 <div className="space-y-4 text-gray-600 leading-relaxed text-lg">
                   <p>
-                    Com anos de experiência no ensino bíblico infantil, <span className="font-bold text-gray-900">Ana Cristina</span> dedica sua caminhada a ajudar crianças a crescerem na fé desde cedo.
+                    Com vasta experiência no ensino bíblico infantil, <span className="font-bold text-gray-900">Ana Cristina</span> dedica sua vida a auxiliar crianças no crescimento genuíno da fé desde os primeiros anos.
                   </p>
                   <p>
-                    Ao longo do tempo, percebeu a dificuldade que muitas professoras, líderes e mães enfrentam ao preparar aulas envolventes e fundamentadas na Palavra de Deus.
+                    Ao longo de sua jornada, compreendeu os desafios que muitas professoras, líderes e mães enfrentam ao preparar aulas que sejam, ao mesmo tempo, envolventes e profundamente fundamentadas na Palavra de Deus.
                   </p>
                   <p>
-                    Foi a partir dessa necessidade que nasceu a <span className="font-bold text-gray-900">Coleção Bíblica Infantil</span>, reunindo mais de <span className="font-bold text-gray-900">500 atividades bíblicas</span> prontas para imprimir e aplicar com facilidade.
+                    Foi desse desejo de servir que nasceu a <span className="font-bold text-gray-900">Coleção Bíblica Infantil</span>, um acervo com mais de <span className="font-bold text-gray-900">500 atividades bíblicas</span> prontas para imprimir e aplicar com excelência.
                   </p>
                   <p>
-                    Seu propósito é claro: <span className="font-bold text-gray-900 italic">Ensinar a Palavra de Deus de forma leve, criativa e significativa</span>, fortalecendo valores cristãos na vida das crianças.
+                    Seu propósito é inspirador: <span className="font-bold text-gray-900 italic">instruir as novas gerações no caminho de Deus de forma leve, criativa e transformadora</span>, consolidando valores cristãos eternos.
                   </p>
                 </div>
               </div>
@@ -504,7 +505,7 @@ export default function App() {
       </section>
 
       {/* Seção de Garantia (Igual à Imagem) */}
-      <section className="py-20 bg-[#F9F7F5] px-4">
+      <section className="py-20 bg-[#F9F7F5] px-5">
         <div className="max-w-3xl mx-auto text-center">
           {/* Ícone de Escudo Superior */}
           <div className="flex justify-center mb-8">
@@ -568,7 +569,7 @@ export default function App() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-5 bg-black/60 backdrop-blur-sm"
           >
             <motion.div 
               initial={{ scale: 0.9, y: 20 }}
@@ -599,7 +600,7 @@ export default function App() {
                     Mas espere, só para você agora...
                   </p>
                   <p className="text-gray-700 font-medium text-base md:text-lg leading-relaxed">
-                    Complete seu material com <span className="font-black text-gray-900">+500 atividades</span> e o pacote completo por apenas <span className="text-green-600 font-black text-2xl">R$ 17,90</span>
+                    Potencialize seu Ministério com mais de <span className="font-bold text-gray-900">500 atividades exclusivas</span> e o pacote completo por apenas <span className="text-green-600 font-black text-2xl">R$ 17,90</span>
                   </p>
                   <p className="text-gray-400 text-sm mt-2 line-through font-bold">
                     De R$ 27,90 por +R$ 17,90
