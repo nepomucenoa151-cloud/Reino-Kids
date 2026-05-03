@@ -35,96 +35,97 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans">
-      {/* Faixa de Alerta Superior */}
-      <div className="bg-blue-royal text-white text-center py-2 text-xs md:text-sm font-bold tracking-widest">
-        🔥 Páscoa chegando! Promoção válida somente hoje — Garanta seus moldes agora!
-      </div>
-
       {/* Hero Section */}
-      <section className="pt-12 pb-20 px-4 text-center max-w-4xl mx-auto">
-        <motion.p 
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-blue-royal font-bold uppercase text-sm mb-4"
-        >
-          Acesso Imediato - Via e-Mail
-        </motion.p>
-        <motion.h1 
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.1 }}
-          className="text-[26px] md:text-6xl font-black leading-tight mb-6 px-2"
-        >
-          <span className="text-blue-royal text-xl md:text-2xl block mb-2">REINO KIDS apresenta</span>
-          Lembrancinhas de Páscoa para Imprimir
-        </motion.h1>
-        <div className="text-black text-lg mb-8 max-w-2xl mx-auto space-y-2">
-          <p className="font-black text-2xl md:text-3xl text-gray-800">
-            ✝️ Cristãos + 🐰 Tradicionais
-          </p>
-          <p className="text-xl font-medium">
-            Baixe, imprima e monte em minutos
-          </p>
-          <p className="text-3xl font-black text-blue-royal">
-            por apenas R$ 10,00
-          </p>
-        </div>
-
-        <motion.a 
-          href="#pacotes"
-          animate={{ scale: [1, 1.08, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-          className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-5 px-10 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
-        >
-          GARANTIR MEUS MOLDES AGORA 🐣
-        </motion.a>
-
-        {/* Trust Bar */}
-        <div className="mt-6 flex flex-wrap justify-center items-center gap-6 text-gray-500 font-bold text-xs md:text-sm uppercase tracking-wider">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-5 h-5 text-green-500" />
-            Compra 100% Segura
-          </div>
-          <div className="flex items-center gap-2">
-            <Zap className="w-5 h-5 text-yellow-500" />
-            Acesso Imediato
-          </div>
-          <div className="flex items-center gap-2">
-            <Award className="w-5 h-5 text-blue-royal" />
-            Garantia 30 Dias
-          </div>
-        </div>
-      </section>
-
-      {/* Prévia do Conteúdo */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto bg-[#FDF8F1] rounded-[3rem] p-8 md:p-16 border border-[#E8DCC4]">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-[#F5EBD8] text-[#A68B5B] px-6 py-2 rounded-full font-black text-xs md:text-sm uppercase tracking-widest mb-6 border border-[#D9C9A9]">
-              <Sparkles className="w-4 h-4" /> PRÉVIA DO CONTEÚDO
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-gray-800 leading-tight">
-              Veja alguns moldes que <span className="text-[#C4A46D]">você vai receber hoje!</span>
-            </h2>
-          </div>
-
-          <div className="flex justify-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl border-4 border-white"
+      <section className="pt-12 md:pt-24 pb-20 px-4 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16 text-center md:text-left">
+          {/* Text Content */}
+          <div className="flex-1 order-2 md:order-1">
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-blue-royal font-black uppercase text-sm mb-4 tracking-widest"
             >
-              <img 
-                src="https://i.ibb.co/jkwLpMv6/Sem-t-tulo.png" 
-                alt="Prévia dos Moldes"
-                className="w-full h-auto"
-                referrerPolicy="no-referrer"
-              />
-            </motion.div>
+              🚀 Acesso Imediato - Via e-Mail
+            </motion.p>
+            <motion.h1 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="text-4xl md:text-6xl font-black leading-[1.1] mb-6 text-gray-800"
+            >
+              <span className="text-blue-royal text-xl md:text-2xl block mb-4 font-black">REINO KIDS apresenta</span>
+              💛 Transforme o momento de oração no instante mais especial do dia do seu filho
+            </motion.h1>
+            
+            <motion.p 
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-xl md:text-2xl text-gray-600 mb-10 font-medium leading-relaxed"
+            >
+              Um jeito simples, lindo e educativo de ensinar seu pequeno a falar com Deus todos os dias 🙏
+            </motion.p>
+
+            <div className="mb-10">
+              <p className="text-3xl font-black text-blue-royal mb-6">
+                por apenas <span className="text-4xl">R$ 10,00</span>
+              </p>
+              <motion.a 
+                href="#pacotes"
+                animate={{ 
+                  scale: [1, 1.05, 1], 
+                  boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 40px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] 
+                }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                className="inline-block bg-green-600 hover:bg-green-700 text-white font-black py-6 px-10 md:px-14 rounded-full text-xl md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline"
+              >
+                QUERO ACESSO AGORA AO POTE 🏺
+              </motion.a>
+            </div>
+
+            {/* Trust Bar */}
+            <div className="flex flex-wrap justify-center md:justify-start items-center gap-6 text-gray-500 font-bold text-xs uppercase tracking-wider">
+              <div className="flex items-center gap-2">
+                <ShieldCheck className="w-5 h-5 text-green-500" />
+                Compra 100% Segura
+              </div>
+              <div className="flex items-center gap-2">
+                <Zap className="w-5 h-5 text-yellow-500" />
+                Acesso Imediato
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-blue-royal" />
+                Garantia 30 Dias
+              </div>
+            </div>
           </div>
+
+          {/* Image Content */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, type: "spring", stiffness: 100 }}
+            className="flex-1 order-1 md:order-2 w-full max-w-xl"
+          >
+            <div className="relative">
+              <div className="absolute -inset-4 bg-blue-royal/5 rounded-[3rem] blur-2xl -z-10" />
+              <div className="rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.15)] border-8 border-white bg-white">
+                <img 
+                  src="https://i.ibb.co/NdMj1xwg/Gemini-Generated-Image-6gv15o6gv15o6gv1.png" 
+                  alt="Potinho da Oração - Reino Kids" 
+                  className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+              {/* Decorative Badge */}
+              <div className="absolute -bottom-6 -right-6 md:right-0 bg-yellow-400 text-gray-900 font-black py-4 px-6 rounded-2xl shadow-xl transform rotate-3 hidden md:block">
+                OFERTA EXCLUSIVA! 🎁
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
+
 
       {/* Seção de Bônus */}
       <section className="bg-blue-royal py-16 text-white px-4">
@@ -134,9 +135,9 @@ export default function App() {
             {[
               { 
                 id: 1, 
-                title: "Potinho da Oração", 
-                desc: "Esse material vai ajudar seu filho a fazer seu devocional pelas manhãs, juntinho com Jesus.",
-                img: "https://i.ibb.co/Wpddm82k/potinnho.jpg" 
+                title: "+100 Dinâmicas Criativas! 🎨", 
+                desc: "Este material vai ajudar você, líder, a melhorar o desempenho e o engajamento dos seus alunos em sala de aula. Transforme o seu Ministério Kids hoje mesmo!",
+                img: "https://i.ibb.co/YBgcpqtC/Gemini-Generated-Image-mqsnwmmqsnwmmqsn.png" 
               },
               { 
                 id: 2, 
@@ -347,11 +348,10 @@ export default function App() {
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* PACOTE BÁSICO */}
           <div className="bg-white p-10 rounded-[3rem] border border-gray-200 text-center opacity-80 transition-all">
-            <h3 className="text-2xl font-bold mb-2 uppercase">PACOTE BÁSICO</h3>
-            <p className="text-gray-500 text-sm mb-4 font-medium">Recurso pontual apenas para lembrancinhas. Ideal para um único evento.</p>
+            <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE BÁSICO</h3>
             <p className="text-4xl font-black mb-6">R$ 10,00</p>
             <ul className="text-left space-y-4 mb-8 text-gray-500 font-medium">
-              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso + de 100 Lembrancinhas Páscoa</li>
+              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Potinho de Oração</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
               <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
@@ -373,21 +373,18 @@ export default function App() {
             <p className="text-5xl font-black text-blue-royal mb-6">R$ 27,90</p>
             
             <div className="text-left mb-6">
-              <h4 className="font-black text-gray-800 uppercase text-sm mb-4 border-b border-gray-100 pb-2">Plano do Ministério Infantil / Planejamento Anual Completo</h4>
+              <h4 className="font-black text-gray-800 uppercase text-sm mb-4 border-b border-gray-100 pb-2">PLANO DO MINISTÉRIO INFANTIL / PLANEJAMENTO ANUAL COMPLETO</h4>
               <ul className="space-y-4 font-bold">
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> +500 Atividades Completas</li>
-                <li className="flex items-center gap-2">
-                  <Check className="text-green-500 w-5 h-5" /> 
-                  <span>Todos os 3 Bônus Grátis</span>
-                </li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Todos os 3 Bônus Grátis</li>
                 <li className="text-blue-royal text-sm font-black pl-7 leading-tight">
                   Economize +10 horas de planejamento por semana com material pronto para o ano todo.
                 </li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versiculos</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 60 Dinâmicas</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Guia de versículos</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> + 100 Dinâmicas</li>
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Moldes Lembrancinha de Páscoa</li>
+                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Potinho da Oração</li>
                 <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Vitalício</li>
-                <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Suporte Prioritário</li>
               </ul>
               <p className="text-[10px] text-red-500 font-black mt-4 uppercase tracking-tighter text-center">
                 Bônus garantidos apenas para compras nas próximas 12 horas.
