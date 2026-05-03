@@ -41,7 +41,7 @@ export default function App() {
         <motion.p 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-blue-royal font-black uppercase text-xs md:text-sm mb-4 tracking-[0.2em]"
+          className="text-blue-royal font-black uppercase text-[10px] md:text-sm mb-4 tracking-[0.25em] whitespace-nowrap"
         >
           🚀 Acesso Imediato - Via e-Mail
         </motion.p>
@@ -90,7 +90,7 @@ export default function App() {
             Um jeito simples, lindo e educativo de ensinar seu pequeno a falar com Deus todos os dias 🙏
           </motion.p>
 
-          <div className="mb-8 w-full">
+          <div className="mb-8 w-full flex flex-col items-center">
             <p className="text-2xl md:text-3xl font-black text-blue-royal mb-4">
               por apenas <span className="text-3xl md:text-4xl text-green-600">R$ 10,00</span>
             </p>
@@ -101,25 +101,25 @@ export default function App() {
                 boxShadow: ["0px 0px 0px rgba(34, 197, 94, 0)", "0px 0px 30px rgba(34, 197, 94, 0.4)", "0px 0px 0px rgba(34, 197, 94, 0)"] 
               }}
               transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-              className="inline-block bg-green-500 hover:bg-green-600 text-white font-black py-5 px-8 md:py-6 md:px-14 rounded-full text-lg md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline min-h-[48px] flex items-center justify-center w-[90%] md:w-auto mx-auto"
+              className="inline-flex bg-green-500 hover:bg-green-600 text-white font-black py-4 px-6 md:py-6 md:px-14 rounded-full text-base md:text-2xl shadow-2xl transition-all uppercase tracking-tight cursor-pointer no-underline min-h-[48px] items-center justify-center w-full max-w-[340px] md:max-w-none mx-auto leading-tight text-center"
             >
               QUERO ACESSO AGORA AO POTE 🏺
             </motion.a>
           </div>
 
           {/* Trust Bar (Compacta para Mobile) */}
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-gray-400 font-bold text-[10px] md:text-xs uppercase tracking-wider">
-            <div className="flex items-center gap-1.5">
+          <div className="flex flex-wrap justify-center items-center gap-y-3 gap-x-5 md:gap-8 text-gray-400 font-bold text-[10px] md:text-xs uppercase tracking-wider w-full">
+            <div className="flex items-center gap-1.5 shrink-0">
               <ShieldCheck className="w-4 h-4 text-green-500" />
-              Compra Segura
+              <span>Compra Segura</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 shrink-0">
               <Zap className="w-4 h-4 text-yellow-500" />
-              Acesso Imediato
+              <span>Acesso Imediato</span>
             </div>
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1.5 shrink-0">
               <Award className="w-4 h-4 text-blue-royal" />
-              Garantia 30 Dias
+              <span>Garantia 30 Dias</span>
             </div>
           </div>
         </div>
