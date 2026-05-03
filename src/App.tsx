@@ -215,9 +215,9 @@ export default function App() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <div className="flex -space-x-4">
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=a" alt="User" referrerPolicy="no-referrer" loading="lazy" />
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=b" alt="User" referrerPolicy="no-referrer" loading="lazy" />
-              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://i.pravatar.cc/150?u=c" alt="User" referrerPolicy="no-referrer" loading="lazy" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://randomuser.me/api/portraits/women/32.jpg" alt="User" referrerPolicy="no-referrer" loading="lazy" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" referrerPolicy="no-referrer" loading="lazy" />
+              <img className="w-12 h-12 rounded-full border-4 border-white object-cover shadow-lg" src="https://randomuser.me/api/portraits/women/68.jpg" alt="User" referrerPolicy="no-referrer" loading="lazy" />
             </div>
             <p className="text-gray-800 font-bold text-lg">
               +3.000 pessoas já compraram e <span className="text-green-600">aprovaram ✅</span>
@@ -348,20 +348,23 @@ export default function App() {
         <h2 className="text-center text-3xl font-black mb-16 uppercase">ESCOLHA SEU PACOTE !!</h2>
         <div className="grid md:grid-cols-2 gap-10 items-center">
           {/* PACOTE BÁSICO */}
-          <div className="bg-white p-10 rounded-[3rem] border border-gray-200 text-center opacity-80 transition-all">
+          <div className="bg-white p-10 rounded-[3rem] border-2 border-black text-center transition-all">
             <h3 className="text-2xl font-bold mb-4 uppercase">PACOTE BÁSICO</h3>
             <p className="text-4xl font-black mb-6">R$ 10,00</p>
-            <ul className="text-left space-y-4 mb-8 text-gray-500 font-medium">
+            <ul className="text-left space-y-4 mb-8 text-black font-medium">
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso Potinho de Oração</li>
               <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Formato Digital PDF</li>
-              <li className="flex items-center gap-2 text-gray-300"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
+              <li className="flex items-center gap-2"><Check className="text-green-500 w-5 h-5" /> Acesso por 7 dias</li>
+              <li className="flex items-center gap-2 text-red-500"><X className="text-red-500 w-5 h-5" /> Sem Bônus Inclusos</li>
             </ul>
-            <button 
-              onClick={() => setShowUpsell(true)}
-              className="inline-block w-full py-4 border-2 border-gray-400 text-gray-500 font-black rounded-full uppercase hover:bg-gray-400 hover:text-white transition-colors cursor-pointer"
+            <a 
+              href="https://pay.cakto.com.br/basdj8y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block w-full py-4 border-2 border-gray-400 text-gray-500 font-black rounded-full uppercase hover:bg-gray-400 hover:text-white transition-colors cursor-pointer no-underline"
             >
               Comprar Agora
-            </button>
+            </a>
           </div>
 
           {/* PACOTE COMPLETO */}
@@ -393,7 +396,9 @@ export default function App() {
             </div>
 
             <motion.a 
-              href="#pacotes"
+              href="https://pay.cakto.com.br/ssyyogf_814327"
+              target="_blank"
+              rel="noopener noreferrer"
               animate={{ scale: [1, 1.05, 1], boxShadow: ["0px 0px 0px rgba(22, 163, 74, 0)", "0px 0px 20px rgba(22, 163, 74, 0.5)", "0px 0px 0px rgba(22, 163, 74, 0)"] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
               className="inline-block w-full py-5 bg-green-600 hover:bg-green-700 text-white font-black rounded-full uppercase shadow-lg shadow-green-200 transition-all cursor-pointer no-underline"
@@ -416,9 +421,7 @@ export default function App() {
                 Garantia 30 Dias
               </div>
             </div>
-            <p className="mt-4 text-[10px] text-gray-500 font-bold text-center leading-tight">
-              ⚠️ Oferta de Páscoa: Últimas unidades com preço promocional e entrega instantânea no seu e-mail
-            </p>
+
           </motion.div>
         </div>
       </section>
@@ -534,7 +537,7 @@ export default function App() {
           {/* Botão */}
           <div className="flex justify-center mb-16">
             <motion.a 
-              href="https://pay.cakto.com.br/ssyyogf_814327"
+              href="#pacotes"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex bg-[#FF6B00] hover:bg-[#E66000] text-white font-black py-6 px-12 rounded-full text-xl md:text-2xl shadow-2xl items-center gap-4 uppercase tracking-tight transition-all cursor-pointer no-underline"
